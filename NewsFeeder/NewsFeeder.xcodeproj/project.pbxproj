@@ -14,6 +14,7 @@
 		5008D0091DF3B7FD00356B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5008D0071DF3B7FD00356B88 /* LaunchScreen.storyboard */; };
 		5008D0111DF3C4CF00356B88 /* NewsArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008D0101DF3C4CF00356B88 /* NewsArticleTableViewCell.swift */; };
 		5008D0341DF3CDB800356B88 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008D0331DF3CDB800356B88 /* DataModel.swift */; };
+		5045871A1DFA6D1600113545 /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504587191DFA6D1600113545 /* NewsApi.swift */; };
 		5065C6AF1DF893B90044F780 /* cnn_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5065C6AC1DF893B90044F780 /* cnn_logo.png */; };
 		5065C6B01DF893B90044F780 /* mashable-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5065C6AD1DF893B90044F780 /* mashable-logo.png */; };
 		50A0CA831DF89A0E0042F3D2 /* newsweek.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A0CA821DF89A0E0042F3D2 /* newsweek.png */; };
@@ -29,6 +30,7 @@
 		5008D00A1DF3B7FD00356B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5008D0101DF3C4CF00356B88 /* NewsArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticleTableViewCell.swift; sourceTree = "<group>"; };
 		5008D0331DF3CDB800356B88 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		504587191DFA6D1600113545 /* NewsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
 		5065C6AC1DF893B90044F780 /* cnn_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cnn_logo.png; path = images/cnn_logo.png; sourceTree = "<group>"; };
 		5065C6AD1DF893B90044F780 /* mashable-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mashable-logo.png"; path = "images/mashable-logo.png"; sourceTree = "<group>"; };
 		50A0CA821DF89A0E0042F3D2 /* newsweek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newsweek.png; path = images/newsweek.png; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		5008D0351DF3CDD500356B88 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				504587191DFA6D1600113545 /* NewsApi.swift */,
 				5008D0331DF3CDB800356B88 /* DataModel.swift */,
 			);
 			name = DataModel;
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5008D0011DF3B7FD00356B88 /* NewsArticleViewController.swift in Sources */,
+				5045871A1DFA6D1600113545 /* NewsApi.swift in Sources */,
 				5008D0111DF3C4CF00356B88 /* NewsArticleTableViewCell.swift in Sources */,
 				5008CFFF1DF3B7FD00356B88 /* AppDelegate.swift in Sources */,
 				5008D0341DF3CDB800356B88 /* DataModel.swift in Sources */,
