@@ -11,7 +11,9 @@ import UIKit
 class NewArticleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
    var articles = [Article]()
-
+   var source = String()
+   
+   @IBOutlet weak var apiName: UILabel!
    // IBOutlet ------------------------------------------------------------------------
    
    @IBOutlet weak var newsOutlet: UITableView!
@@ -29,7 +31,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
       cell.newsAuthorOutlet.text = articles[indexPath.row].author
       cell.newsDescOutlet.text = articles[indexPath.row].description
       cell.newsImageOutlet.downLoadImag(from: articles[indexPath.row].urlToImage)
-
+      
       return cell
       
    }
@@ -39,55 +41,43 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      fetchNewsArticles(closure: {data in
+      NewsApi.fetchNewsArticles(source: source, closure: {data in
+         self.articles = data as! [Article]
          self.newsOutlet.reloadData()
+         
+         
+         switch self.source {
+         case "cnn":
+            self.apiName.text = "CNN"
+         case "mashable":
+            self.apiName.text = "Mashable"
+            self.apiName.backgroundColor = UIColor.blue
+         case "newsweek":
+            self.apiName.text = "Newsweek"
+         default:
+            self.apiName.text = "No news agency"
+         }
       })
-   }
-   
-   func parseNewsJson(data: Data, closure: @escaping ([Article?]) -> ()) {
-      //let article: Article? = nil
-      if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? [String: Any] {
-         
-         let articlesJSON = jsonObject["articles"] as! [[String: Any]]
-         
-         for articleJSON in articlesJSON {
-            let article = Article(jsonObject: articleJSON)
-            self.articles.append(article)
-         }
-         DispatchQueue.main.async {
-            closure(self.articles)
-         }
-      }
-      
-//      if !Thread.isMainThread {
-//         
-//         DispatchQueue.main.async {
-//            closure([article])
-//         }
-//         
-//      }
-   }
-   
-   func fetchNewsArticles(closure: @escaping ([Article?]) -> ()) {
-      let apiKey = "df560ed5464d4ed8831e5623034e81f7"
-      let source = "newsweek"
-      let sortBy = "top"
-      let url = URL(string: "https://newsapi.org/v1/articles?source=\(source)&sortBy=\(sortBy)&apiKey=\(apiKey)")!
-      URLSession.shared.dataTask(with: url) { (data, _, _) in
-         guard let responseData = data else {
-            closure([nil])
-            return
-         }
-         
-         self.parseNewsJson(data: responseData, closure: closure)
-      }.resume()
    }
    
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! NewsArticleDetailViewController
       webVC.url = self.articles[indexPath.row].url
+      webVC.source = self.apiName.text!
       
       self.present(webVC, animated: true, completion: nil)
+   }
+   
+   
+   //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   //      if segue.identifier == "NewArticleViewController_to_NewsArticleDetailViewController" {
+   //         let destination = segue.destination as! NewsArticleDetailViewController
+   //         destination.source = sender as! String
+   //      }
+   //   }
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      newsOutlet.reloadData()
    }
 }
 
@@ -104,6 +94,6 @@ extension UIImageView {
       task.resume()
    }
 }
-   
+
 
 

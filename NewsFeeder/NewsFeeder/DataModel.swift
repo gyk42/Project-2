@@ -25,17 +25,3 @@ class Article {
       publishedAt = jsonObject["publishedAt"] as? String ?? "Unknown"
    }
 }
-
-//class Feed {
-//   var source: String
-//   var sortBy: String
-//   var articles: [Articles]
-//   
-//   init(jsonObject: [String : Any]) {
-//      source = jsonObject["source"] as? String ?? "Unknown"
-//      sortBy = jsonObject["sortBy"] as? String ?? "Unknown"
-//      
-//      let art = jsonObject["articles"] as? [String : Any] ?? [String : Any]()
-//      articles = [Articles(jsonObject: art)]
-//   }
-//}

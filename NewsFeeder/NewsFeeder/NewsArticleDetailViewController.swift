@@ -12,10 +12,15 @@ class NewsArticleDetailViewController: UIViewController {
    
    @IBOutlet weak var webViewOutlet: UIWebView!
    
+   @IBOutlet weak var apiName: UILabel!
+   
    var url: String?
+   var source: String?
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      
+      apiName.text = source
       
       webViewOutlet.loadRequest(URLRequest(url: URL(string: url!)!))
    }
