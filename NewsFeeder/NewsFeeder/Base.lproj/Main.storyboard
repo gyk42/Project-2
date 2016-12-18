@@ -42,27 +42,28 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleAspectFit" restorationIdentifier="cnn" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1y-ox-SZG">
-                                <rect key="frame" x="87" y="192" width="200" height="80"/>
+                                <rect key="frame" x="87" y="123" width="200" height="85"/>
                                 <color key="backgroundColor" red="0.79738861322402954" green="0.00018316571367904544" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="c6c-YD-5Lv"/>
-                                </constraints>
                                 <state key="normal" image="cnn_logo.png"/>
                                 <connections>
                                     <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="BgD-ow-kii"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" restorationIdentifier="mashable" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoq-GX-BlJ">
-                                <rect key="frame" x="87" y="302" width="200" height="80"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" restorationIdentifier="mashable" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoq-GX-BlJ">
+                                <rect key="frame" x="87" y="232" width="200" height="84"/>
+                                <color key="backgroundColor" red="0.0" green="0.68201404809951782" blue="0.93591552972793579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="Wim-EY-cek"/>
+                                </constraints>
                                 <state key="normal" image="mashable-logo.png"/>
                                 <connections>
                                     <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="DDg-aW-tLO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="left" restorationIdentifier="newsweek" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqI-Pd-Ssf">
-                                <rect key="frame" x="87" y="411" width="200" height="80"/>
+                                <rect key="frame" x="87" y="342" width="200" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="d2C-1u-0HP"/>
+                                    <constraint firstAttribute="height" constant="80" id="yJi-bF-NSz"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="newsweek.png"/>
                                 <connections>
@@ -72,22 +73,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Hoq-GX-BlJ" secondAttribute="trailing" constant="88" id="2Dz-AL-D9P"/>
+                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leadingMargin" constant="71" id="3Wk-ji-g6G"/>
                             <constraint firstItem="Wtp-dK-wYw" firstAttribute="top" secondItem="QFP-Es-yRY" secondAttribute="bottom" id="6Hv-WN-YvL"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="bottom" secondItem="Wtp-dK-wYw" secondAttribute="top" id="7xC-em-qtz"/>
-                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="trailing" secondItem="Hoq-GX-BlJ" secondAttribute="trailing" id="8cw-xf-IWO"/>
-                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="top" secondItem="Hoq-GX-BlJ" secondAttribute="bottom" constant="29" id="BCZ-Dx-kLp"/>
-                            <constraint firstItem="Fl0-mG-0j2" firstAttribute="top" secondItem="CqI-Pd-Ssf" secondAttribute="bottom" constant="176" id="CEs-zA-kjH"/>
-                            <constraint firstItem="k9f-KL-Qze" firstAttribute="centerX" secondItem="Hoq-GX-BlJ" secondAttribute="centerX" id="FDp-YG-WQN"/>
-                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="leading" secondItem="Hoq-GX-BlJ" secondAttribute="leading" id="J7v-l9-Flr"/>
-                            <constraint firstItem="l1y-ox-SZG" firstAttribute="trailing" secondItem="Hoq-GX-BlJ" secondAttribute="trailing" id="K3Z-On-XhT"/>
-                            <constraint firstItem="l1y-ox-SZG" firstAttribute="top" secondItem="Wtp-dK-wYw" secondAttribute="bottom" constant="128" id="KIw-ej-Mz2"/>
+                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="top" secondItem="Hoq-GX-BlJ" secondAttribute="bottom" constant="26" id="E3M-wT-L7q"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="top" secondItem="DLh-ar-N6W" secondAttribute="top" id="KtW-WM-UWU"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="leading" secondItem="l1y-ox-SZG" secondAttribute="leading" id="Lg8-xg-ngN"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="trailing" secondItem="Wtp-dK-wYw" secondAttribute="trailing" id="LrX-3O-z1W"/>
+                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="top" secondItem="Hoq-GX-BlJ" secondAttribute="bottom" constant="26" id="MbI-8A-D5F"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="top" secondItem="l1y-ox-SZG" secondAttribute="bottom" constant="24" id="TNc-zc-Adc"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="trailing" secondItem="CqI-Pd-Ssf" secondAttribute="trailing" id="Wmt-3f-VlA"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="leading" secondItem="CqI-Pd-Ssf" secondAttribute="leading" id="dVy-wI-bpS"/>
+                            <constraint firstItem="l1y-ox-SZG" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leadingMargin" constant="71" id="eJH-gs-R1E"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="top" secondItem="l1y-ox-SZG" secondAttribute="bottom" constant="24" id="ed1-NV-BNd"/>
                             <constraint firstItem="Wtp-dK-wYw" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leading" id="er7-PZ-4jH"/>
                             <constraint firstAttribute="trailing" secondItem="Wtp-dK-wYw" secondAttribute="trailing" id="hV9-BH-Obz"/>
-                            <constraint firstItem="l1y-ox-SZG" firstAttribute="leading" secondItem="Hoq-GX-BlJ" secondAttribute="leading" id="mhM-ja-jfc"/>
-                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="top" secondItem="l1y-ox-SZG" secondAttribute="bottom" constant="30" id="qzg-bc-O3d"/>
+                            <constraint firstItem="l1y-ox-SZG" firstAttribute="top" secondItem="Wtp-dK-wYw" secondAttribute="bottom" constant="59" id="i05-8f-kAr"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="trailing" secondItem="l1y-ox-SZG" secondAttribute="trailing" id="m9s-tJ-FHe"/>
+                            <constraint firstItem="l1y-ox-SZG" firstAttribute="top" secondItem="Wtp-dK-wYw" secondAttribute="bottom" constant="59" id="rWZ-BZ-KUg"/>
+                            <constraint firstItem="l1y-ox-SZG" firstAttribute="centerX" secondItem="Wtp-dK-wYw" secondAttribute="centerX" id="rss-EA-HEm"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="leading" secondItem="Wtp-dK-wYw" secondAttribute="leading" id="t1d-I9-UdO"/>
                         </constraints>
                     </view>
@@ -100,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6F-f3-ruR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="127"/>
+            <point key="canvasLocation" x="-860" y="126.38680659670166"/>
         </scene>
         <!--News Article View Controller-->
         <scene sceneID="tne-QT-ifu">
