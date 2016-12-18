@@ -48,14 +48,14 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    }
    
    
-   //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   //      if segue.identifier == "NewArticleViewController_to_NewsArticleDetailViewController" {
-   //         let destination = segue.destination as! NewsArticleDetailViewController
-   //         destination.source = sender as! String
-   //      }
-   //   }
-   
    // Override ------------------------------------------------------------------------
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "NewArticleViewController_to_NewsArticleDetailViewController" {
+         let destination = segue.destination as! NewsArticleDetailViewController
+         destination.source = (sender as! String)
+      }
+   }
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -68,15 +68,19 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
          switch self.source {
          case "cnn":
             self.apiName.text = "CNN"
+            self.apiName.backgroundColor = UIColor.red
          case "mashable":
             self.apiName.text = "Mashable"
             self.apiName.backgroundColor = UIColor.blue
          case "newsweek":
             self.apiName.text = "Newsweek"
+            self.apiName.backgroundColor = UIColor.red
          default:
             self.apiName.text = "No news agency"
          }
       })
+      
+      newsOutlet.reloadData()
    }
    
    override func viewWillAppear(_ animated: Bool) {

@@ -14,6 +14,8 @@ class NewsArticleDetailViewController: UIViewController {
    
    @IBOutlet weak var apiName: UILabel!
    
+
+   
    var url: String?
    var source: String?
    
@@ -22,6 +24,21 @@ class NewsArticleDetailViewController: UIViewController {
       
       apiName.text = source
       
+      let sourceBKColor = source == "Mashable" ? UIColor.blue : UIColor.red
+      apiName.backgroundColor = sourceBKColor
+      
       webViewOutlet.loadRequest(URLRequest(url: URL(string: url!)!))
    }
+   
+   @IBAction func backPressed(_ sender: Any) {
+      performSegue(withIdentifier: "NewsArticleDetailViewController_to_NewArticleViewController", sender: source?.lowercased())
+   }
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "NewsArticleDetailViewController_to_NewArticleViewController" {
+         let destination = segue.destination as! NewArticleViewController
+         destination.source = source!.lowercased()
+      }
+   }
+   
 }
