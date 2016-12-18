@@ -36,6 +36,9 @@
 		5045871B1DFB255600113545 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5065C6AC1DF893B90044F780 /* cnn_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cnn_logo.png; path = images/cnn_logo.png; sourceTree = "<group>"; };
 		5065C6AD1DF893B90044F780 /* mashable-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mashable-logo.png"; path = "images/mashable-logo.png"; sourceTree = "<group>"; };
+		5071BAC81E06231700527466 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Bold.ttf"; path = "fonts/Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		5071BAC91E06231700527466 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Light.ttf"; path = "fonts/Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		5071BACA1E06231700527466 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Regular.ttf"; path = "fonts/Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		50A0CA821DF89A0E0042F3D2 /* newsweek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newsweek.png; path = images/newsweek.png; sourceTree = "<group>"; };
 		50AC916B1DFE38080091CAA4 /* NewsArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +73,7 @@
 		5008CFFD1DF3B7FD00356B88 /* NewsFeeder */ = {
 			isa = PBXGroup;
 			children = (
+				5071BAC71E06228D00527466 /* Fonts */,
 				5065C6AB1DF893AC0044F780 /* images */,
 				5008D0301DF3CC8B00356B88 /* Logic */,
 				5008D0351DF3CDD500356B88 /* DataModel */,
@@ -126,6 +130,16 @@
 				5065C6AD1DF893B90044F780 /* mashable-logo.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		5071BAC71E06228D00527466 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5071BAC81E06231700527466 /* Comfortaa-Bold.ttf */,
+				5071BAC91E06231700527466 /* Comfortaa-Light.ttf */,
+				5071BACA1E06231700527466 /* Comfortaa-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
