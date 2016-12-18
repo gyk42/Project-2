@@ -12,11 +12,14 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    
    var articles = [Article]()
    var source = String()
+   var menuShowing = false
    
    @IBOutlet weak var apiName: UILabel!
    // IBOutlet ------------------------------------------------------------------------
    
    @IBOutlet weak var newsOutlet: UITableView!
+   @IBOutlet weak var menuOutlet: UIView!
+   @IBOutlet weak var menuLeadingConstraint: NSLayoutConstraint!
    
    //var article: [NewsArticle]? = []
    // tableView ------------------------------------------------------------------------
@@ -35,6 +38,22 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
       return cell
       
    }
+   
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! NewsArticleDetailViewController
+      webVC.url = self.articles[indexPath.row].url
+      webVC.source = self.apiName.text!
+      
+      self.present(webVC, animated: true, completion: nil)
+   }
+   
+   
+   //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   //      if segue.identifier == "NewArticleViewController_to_NewsArticleDetailViewController" {
+   //         let destination = segue.destination as! NewsArticleDetailViewController
+   //         destination.source = sender as! String
+   //      }
+   //   }
    
    // Override ------------------------------------------------------------------------
    
@@ -60,25 +79,24 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
       })
    }
    
-   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! NewsArticleDetailViewController
-      webVC.url = self.articles[indexPath.row].url
-      webVC.source = self.apiName.text!
-      
-      self.present(webVC, animated: true, completion: nil)
-   }
-   
-   
-   //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   //      if segue.identifier == "NewArticleViewController_to_NewsArticleDetailViewController" {
-   //         let destination = segue.destination as! NewsArticleDetailViewController
-   //         destination.source = sender as! String
-   //      }
-   //   }
    override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       newsOutlet.reloadData()
    }
+   
+   // IBAction -----------------------------------------------------
+   
+   @IBAction func menuOpenPressed(_ sender: Any) {
+      if menuShowing {
+         menuLeadingConstraint.constant = -170
+      } else {
+         menuLeadingConstraint.constant = 0
+      }
+      
+      menuShowing = !menuShowing
+   }
+   
+   
 }
 
 extension UIImageView {
