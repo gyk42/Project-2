@@ -140,14 +140,23 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8W6-IL-zaz"/>
                                     <barButtonItem title="Top" width="71.5" id="Dbb-Ep-qM6">
                                         <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="topTapBarPressed:" destination="BYZ-38-t0r" id="HF1-kh-sCH"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="BPV-AI-zuy"/>
                                     <barButtonItem title="Latest" id="KyP-hx-IvG">
                                         <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="lastestTapBarPressed:" destination="BYZ-38-t0r" id="Za3-kK-Ioy"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Fcc-Oh-9o2"/>
                                     <barButtonItem title="Popular" id="cnu-dZ-XSk">
                                         <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="popularTapBarPressed:" destination="BYZ-38-t0r" id="gTW-QP-0um"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Qkx-XE-tJG"/>
                                 </items>
@@ -172,7 +181,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ttitle Ttitle TtitleTtitle  " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn2-sF-6Xp">
-                                                    <rect key="frame" x="125" y="8" width="242" height="14"/>
+                                                    <rect key="frame" x="125" y="8" width="242" height="13.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="242" id="sHe-YF-v8h"/>
                                                     </constraints>
@@ -181,7 +190,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwt-uv-T66">
-                                                    <rect key="frame" x="125" y="30" width="242" height="52"/>
+                                                    <rect key="frame" x="125" y="29.5" width="242" height="52.5"/>
                                                     <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -241,8 +250,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-Od-mJZ">
-                                <rect key="frame" x="0.0" y="64" width="150" height="603"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-Od-mJZ">
+                                <rect key="frame" x="-170" y="64" width="150" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="vTl-mj-8qV"/>

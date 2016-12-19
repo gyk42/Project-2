@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Article {
    var author: String
    var title: String

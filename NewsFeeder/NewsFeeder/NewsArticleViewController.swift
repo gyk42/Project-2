@@ -14,15 +14,17 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    var source = String()
    var menuShowing = false
    
-   @IBOutlet weak var apiName: UILabel!
-   // IBOutlet ------------------------------------------------------------------------
+   var sortBy = String()
    
+   // MARK: IBOutlet --------------------------------------------------------------
+   
+   @IBOutlet weak var apiName: UILabel!
    @IBOutlet weak var newsOutlet: UITableView!
    @IBOutlet weak var menuOutlet: UIView!
    @IBOutlet weak var menuLeadingConstraint: NSLayoutConstraint!
+
+   // MARK: tableView --------------------------------------------------------------
    
-   //var article: [NewsArticle]? = []
-   // tableView ------------------------------------------------------------------------
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return articles.count
    }
@@ -30,10 +32,12 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsArticleTableViewCell
       
-      cell.newsTitleOulet.text = articles[indexPath.row].title
-      cell.newsAuthorOutlet.text = articles[indexPath.row].author
-      cell.newsDescOutlet.text = articles[indexPath.row].description
-      cell.newsImageOutlet.downLoadImag(from: articles[indexPath.row].urlToImage)
+      let articlesRow = articles[indexPath.row]
+      
+      cell.newsTitleOulet.text = articlesRow.title
+      cell.newsAuthorOutlet.text = articlesRow.author
+      cell.newsDescOutlet.text = articlesRow.description
+      cell.newsImageOutlet.downLoadImag(from: articlesRow.urlToImage)
       
       return cell
       
@@ -47,8 +51,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
       self.present(webVC, animated: true, completion: nil)
    }
    
-   
-   // Override ------------------------------------------------------------------------
+   // MARK: Override -------------------------------------------------------------
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if segue.identifier == "NewArticleViewController_to_NewsArticleDetailViewController" {
@@ -60,10 +63,13 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      NewsApi.fetchNewsArticles(source: source, closure: {data in
+      NewsApi.fetchNewsArticles(source: source, sortBy: sortBy, closure: {data in
          self.articles = data as! [Article]
          self.newsOutlet.reloadData()
          
+         if self.sortBy.isEmpty {
+            self.sortBy = "top"
+         }
          
          switch self.source {
          case "cnn":
@@ -78,8 +84,9 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
          default:
             self.apiName.text = "No news agency"
          }
+         
+         print("sortBy: \(self.sortBy)")
       })
-      
       newsOutlet.reloadData()
    }
    
@@ -88,7 +95,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
       newsOutlet.reloadData()
    }
    
-   // IBAction -----------------------------------------------------
+   // MARK: IBAction -----------------------------------------------------
    
    @IBAction func menuOpenPressed(_ sender: Any) {
       if menuShowing {
@@ -100,8 +107,24 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
       menuShowing = !menuShowing
    }
    
+   @IBAction func topTapBarPressed(_ sender: Any) {
+      sortBy = "top"
+  //    NewsApi.fetchNewsArticles(source: source, sortBy: sortBy, closure: <#T##([Article?]) -> ()#>)
+      self.newsOutlet.reloadData()
+      
+   }
    
+   @IBAction func lastestTapBarPressed(_ sender: Any) {
+      sortBy = "lastest"
+      self.newsOutlet.reloadData()
+   }
+   @IBAction func popularTapBarPressed(_ sender: Any) {
+      sortBy = "popular"
+      self.newsOutlet.reloadData()
+   }
 }
+
+// MARK: Extention ---------------------------------------------------------
 
 extension UIImageView {
    func downLoadImag(from url: String) {

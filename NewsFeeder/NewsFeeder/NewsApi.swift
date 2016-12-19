@@ -8,10 +8,13 @@
 
 import Foundation
 
+//let rememberedDirection = currentDirection
+//currentDirection = .east
+
 class NewsApi {
    
    static func parseNewsJson(data: Data, closure: @escaping ([Article?]) -> ()) {
-      //let article: Article? = nil
+      
       if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? [String: Any] {
          
          let articlesJSON = jsonObject["articles"] as! [[String: Any]]
@@ -22,16 +25,18 @@ class NewsApi {
             let article = Article(jsonObject: articleJSON)
             articles.append(article)
          }
+         
          DispatchQueue.main.async {
             closure(articles)
          }
       }
    }
    
-   static func fetchNewsArticles(source: String, closure: @escaping ([Article?]) -> ()) {
+   static func fetchNewsArticles(source: String, sortBy: String, closure: @escaping ([Article?]) -> ()) {
+      
       let apiKey = "df560ed5464d4ed8831e5623034e81f7"
-      let sortBy = "top"
-//      let source = "mashable"
+      //let sortBy = "top"
+      
       let url = URL(string: "https://newsapi.org/v1/articles?source=\(source)&sortBy=\(sortBy)&apiKey=\(apiKey)")!
       URLSession.shared.dataTask(with: url) { (data, _, _) in
          guard let responseData = data else {
@@ -40,9 +45,7 @@ class NewsApi {
          }
          
          parseNewsJson(data: responseData, closure: closure)
-         }.resume()
+      }.resume()
    }
-   
-   
 }
 

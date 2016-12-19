@@ -10,14 +10,16 @@ import UIKit
 
 class NewsArticleDetailViewController: UIViewController {
    
-   @IBOutlet weak var webViewOutlet: UIWebView!
+   // MARK IBOutlet ----------------------------------------------------------------
    
+   @IBOutlet weak var webViewOutlet: UIWebView!
    @IBOutlet weak var apiName: UILabel!
    
 
-   
    var url: String?
    var source: String?
+   
+   // MARK: override -------------------------------------------------------------
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -30,15 +32,20 @@ class NewsArticleDetailViewController: UIViewController {
       webViewOutlet.loadRequest(URLRequest(url: URL(string: url!)!))
    }
    
-   @IBAction func backPressed(_ sender: Any) {
-      performSegue(withIdentifier: "NewsArticleDetailViewController_to_NewArticleViewController", sender: source?.lowercased())
-   }
-   
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if segue.identifier == "NewsArticleDetailViewController_to_NewArticleViewController" {
          let destination = segue.destination as! NewArticleViewController
          destination.source = source!.lowercased()
       }
    }
+   
+   // MARK: IBAction ------------------------------------------------------------------
+   
+   @IBAction func backPressed(_ sender: Any) {
+      performSegue(withIdentifier: "NewsArticleDetailViewController_to_NewArticleViewController", sender: source?.lowercased())
+   }
+   
+   
+   
    
 }
