@@ -14,7 +14,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    var source = String()
    var menuShowing = false
    
-   var sortBy = String()
+   var sortBysAvailable = String()
    
    // MARK: IBOutlet --------------------------------------------------------------
    
@@ -53,22 +53,15 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    
    // MARK: Override -------------------------------------------------------------
    
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if segue.identifier == "NewArticleViewController_to_NewsArticleDetailViewController" {
-         let destination = segue.destination as! NewsArticleDetailViewController
-         destination.source = (sender as! String)
-      }
-   }
-   
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      NewsApi.fetchNewsArticles(source: source, sortBy: sortBy, closure: {data in
+      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: sortBysAvailable, closure: {data in
          self.articles = data as! [Article]
          self.newsOutlet.reloadData()
          
-         if self.sortBy.isEmpty {
-            self.sortBy = "top"
+         if self.sortBysAvailable.isEmpty {
+            self.sortBysAvailable = "top"
          }
          
          switch self.source {
@@ -85,7 +78,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
             self.apiName.text = "No news agency"
          }
          
-         print("sortBy: \(self.sortBy)")
+         print("sortBysAvailable: \(self.sortBysAvailable)")
       })
       newsOutlet.reloadData()
    }
@@ -108,19 +101,24 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    }
    
    @IBAction func topTapBarPressed(_ sender: Any) {
-      sortBy = "top"
-  //    NewsApi.fetchNewsArticles(source: source, sortBy: sortBy, closure: <#T##([Article?]) -> ()#>)
-      self.newsOutlet.reloadData()
-      
+      sortBysAvailable = "top"
+      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: "top", closure: { articles in
+         self.newsOutlet.reloadData()
+      })
    }
    
    @IBAction func lastestTapBarPressed(_ sender: Any) {
-      sortBy = "lastest"
-      self.newsOutlet.reloadData()
+      sortBysAvailable = "latest"
+      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: "latest", closure: { articles in
+         self.newsOutlet.reloadData()
+      })
    }
+
    @IBAction func popularTapBarPressed(_ sender: Any) {
-      sortBy = "popular"
-      self.newsOutlet.reloadData()
+      sortBysAvailable = "popular"
+      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: "popular", closure: { articles in
+         self.newsOutlet.reloadData()
+      })
    }
 }
 
