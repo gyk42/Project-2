@@ -9,18 +9,25 @@
 import UIKit
 
 class SplashViewController: UIViewController {
-   @IBOutlet weak var cnnButton: UIButton!
-   @IBOutlet weak var mashableButton: UIButton!
-   @IBOutlet weak var newsweekButton: UIButton!
-
+   
+   @IBOutlet weak var nymButton: UIButton!
+   @IBOutlet weak var reutersButton: UIButton!
+   @IBOutlet weak var usaButton: UIButton!
+   @IBOutlet weak var timeButton: UIButton!
+   @IBOutlet weak var apButton: UIButton!
+   
    @IBAction func buttonTouchUpInside(_ sender: UIButton) {
       switch sender {
-      case cnnButton:
-         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "cnn")
-      case mashableButton:
-         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "mashable")
-      case newsweekButton:
-         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "newsweek")
+      case nymButton:
+         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "new-york-magazine")
+      case reutersButton:
+         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "reuters")
+      case usaButton:
+         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "usa-today")
+      case timeButton:
+         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "time")
+      case apButton:
+         performSegue(withIdentifier: "SplashViewController_to_NewArticleViewController", sender: "associated-press")
       default:
          ()
       }

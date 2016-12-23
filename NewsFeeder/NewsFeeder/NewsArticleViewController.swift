@@ -14,7 +14,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    var source = String()
    var menuShowing = false
    
-   var sortBysAvailable = String()
+   var sortBy = String()
    
    // MARK: IBOutlet --------------------------------------------------------------
    
@@ -56,12 +56,12 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: sortBysAvailable, closure: {data in
+      NewsApi.fetchNewsArticles(source: source, sortBy: sortBy, closure: {data in
          self.articles = data as! [Article]
          self.newsOutlet.reloadData()
          
-         if self.sortBysAvailable.isEmpty {
-            self.sortBysAvailable = "top"
+         if self.sortBy.isEmpty {
+            self.sortBy = "top"
          }
          
          switch self.source {
@@ -77,8 +77,6 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
          default:
             self.apiName.text = "No news agency"
          }
-         
-         print("sortBysAvailable: \(self.sortBysAvailable)")
       })
       newsOutlet.reloadData()
    }
@@ -101,42 +99,22 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    }
    
    @IBAction func topTapBarPressed(_ sender: Any) {
-      sortBysAvailable = "top"
-      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: "top", closure: { articles in
-         self.newsOutlet.reloadData()
+      sortBy = "top"
+      NewsApi.fetchNewsArticles(source: source, sortBy: "top", closure: { articles in
+         self.viewDidLoad()
+         //self.newsOutlet.reloadData()
       })
    }
    
    @IBAction func lastestTapBarPressed(_ sender: Any) {
-      sortBysAvailable = "latest"
-      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: "latest", closure: { articles in
-         self.newsOutlet.reloadData()
-      })
-   }
-
-   @IBAction func popularTapBarPressed(_ sender: Any) {
-      sortBysAvailable = "popular"
-      NewsApi.fetchNewsArticles(source: source, sortBysAvailable: "popular", closure: { articles in
-         self.newsOutlet.reloadData()
+      sortBy = "latest"
+      NewsApi.fetchNewsArticles(source: source, sortBy: "latest", closure: { articles in
+         self.viewDidLoad()
+         //self.newsOutlet.reloadData()
       })
    }
 }
 
-// MARK: Extention ---------------------------------------------------------
-
-extension UIImageView {
-   func downLoadImag(from url: String) {
-      let urlRequest = URLRequest(url: URL(string: url)!)
-      let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-         guard let data = data, error == nil else { return }
-         
-         DispatchQueue.main.async {
-            self.image = UIImage(data: data)
-         }
-      }
-      task.resume()
-   }
-}
 
 
 

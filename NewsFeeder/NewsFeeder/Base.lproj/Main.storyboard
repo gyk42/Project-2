@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B6F-sj-8uK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B6F-sj-8uK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,63 +42,76 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleAspectFit" restorationIdentifier="cnn" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1y-ox-SZG">
-                                <rect key="frame" x="87" y="123" width="200" height="85"/>
-                                <color key="backgroundColor" red="0.79738861322402954" green="0.00018316571367904544" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="cnn_logo.png"/>
+                                <rect key="frame" x="87" y="123" width="200" height="47"/>
+                                <state key="normal" image="new-york-magazine-s.png"/>
                                 <connections>
                                     <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="BgD-ow-kii"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" restorationIdentifier="mashable" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoq-GX-BlJ">
-                                <rect key="frame" x="87" y="232" width="200" height="84"/>
-                                <color key="backgroundColor" red="0.0" green="0.68201404809951782" blue="0.93591552972793579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="Wim-EY-cek"/>
-                                </constraints>
-                                <state key="normal" image="mashable-logo.png"/>
+                                <rect key="frame" x="87" y="210" width="200" height="48"/>
+                                <state key="normal" image="reuters-s.png"/>
                                 <connections>
                                     <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="DDg-aW-tLO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="left" restorationIdentifier="newsweek" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqI-Pd-Ssf">
-                                <rect key="frame" x="87" y="342" width="200" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="yJi-bF-NSz"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="newsweek.png"/>
+                                <rect key="frame" x="87" y="298" width="200" height="37"/>
+                                <state key="normal" title="Button" image="usa-today-s.png"/>
                                 <connections>
                                     <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="M7s-Sz-TOH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLd-9P-SSJ">
+                                <rect key="frame" x="98" y="375" width="178" height="63"/>
+                                <state key="normal" image="time-s.png"/>
+                                <connections>
+                                    <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="GbM-dL-gBN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-4V-9ag">
+                                <rect key="frame" x="110" y="472" width="155" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="xQT-zy-p7a"/>
+                                </constraints>
+                                <state key="normal" image="associated-press-s.png"/>
+                                <connections>
+                                    <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="7aW-5o-fvp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leadingMargin" constant="71" id="3Wk-ji-g6G"/>
+                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="top" secondItem="Hoq-GX-BlJ" secondAttribute="bottom" constant="40" id="0do-lY-47e"/>
+                            <constraint firstAttribute="trailing" secondItem="l1y-ox-SZG" secondAttribute="trailing" constant="88" id="3NW-fe-ilO"/>
+                            <constraint firstItem="qLd-9P-SSJ" firstAttribute="top" secondItem="CqI-Pd-Ssf" secondAttribute="bottom" constant="40" id="3QJ-bp-SW4"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leading" constant="87" id="5nL-AP-H4t"/>
                             <constraint firstItem="Wtp-dK-wYw" firstAttribute="top" secondItem="QFP-Es-yRY" secondAttribute="bottom" id="6Hv-WN-YvL"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="bottom" secondItem="Wtp-dK-wYw" secondAttribute="top" id="7xC-em-qtz"/>
-                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="top" secondItem="Hoq-GX-BlJ" secondAttribute="bottom" constant="26" id="E3M-wT-L7q"/>
+                            <constraint firstItem="D3B-4V-9ag" firstAttribute="centerX" secondItem="qLd-9P-SSJ" secondAttribute="centerX" id="CH3-aI-k5V"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="top" secondItem="DLh-ar-N6W" secondAttribute="top" id="KtW-WM-UWU"/>
-                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="leading" secondItem="l1y-ox-SZG" secondAttribute="leading" id="Lg8-xg-ngN"/>
+                            <constraint firstItem="qLd-9P-SSJ" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leading" constant="98" id="LEJ-Gc-xdF"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="trailing" secondItem="Wtp-dK-wYw" secondAttribute="trailing" id="LrX-3O-z1W"/>
-                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="top" secondItem="Hoq-GX-BlJ" secondAttribute="bottom" constant="26" id="MbI-8A-D5F"/>
-                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="top" secondItem="l1y-ox-SZG" secondAttribute="bottom" constant="24" id="TNc-zc-Adc"/>
-                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="trailing" secondItem="CqI-Pd-Ssf" secondAttribute="trailing" id="Wmt-3f-VlA"/>
-                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="leading" secondItem="CqI-Pd-Ssf" secondAttribute="leading" id="dVy-wI-bpS"/>
-                            <constraint firstItem="l1y-ox-SZG" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leadingMargin" constant="71" id="eJH-gs-R1E"/>
-                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="top" secondItem="l1y-ox-SZG" secondAttribute="bottom" constant="24" id="ed1-NV-BNd"/>
+                            <constraint firstAttribute="trailing" secondItem="CqI-Pd-Ssf" secondAttribute="trailing" constant="88" id="Lvv-C4-jAm"/>
+                            <constraint firstItem="D3B-4V-9ag" firstAttribute="top" secondItem="qLd-9P-SSJ" secondAttribute="bottom" constant="34" id="QeR-S7-fLf"/>
+                            <constraint firstItem="CqI-Pd-Ssf" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leading" constant="87" id="SOF-Fs-A85"/>
+                            <constraint firstAttribute="trailing" secondItem="qLd-9P-SSJ" secondAttribute="trailing" constant="99" id="YMU-oF-cv8"/>
+                            <constraint firstItem="l1y-ox-SZG" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leading" constant="87" id="afb-br-yim"/>
                             <constraint firstItem="Wtp-dK-wYw" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leading" id="er7-PZ-4jH"/>
+                            <constraint firstAttribute="trailing" secondItem="Hoq-GX-BlJ" secondAttribute="trailing" constant="88" id="fZG-th-iEZ"/>
+                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="top" secondItem="l1y-ox-SZG" secondAttribute="bottom" constant="40" id="fdC-0i-E7w"/>
+                            <constraint firstItem="l1y-ox-SZG" firstAttribute="top" secondItem="Wtp-dK-wYw" secondAttribute="bottom" constant="59" id="feZ-Xt-nNE"/>
                             <constraint firstAttribute="trailing" secondItem="Wtp-dK-wYw" secondAttribute="trailing" id="hV9-BH-Obz"/>
-                            <constraint firstItem="l1y-ox-SZG" firstAttribute="top" secondItem="Wtp-dK-wYw" secondAttribute="bottom" constant="59" id="i05-8f-kAr"/>
-                            <constraint firstItem="Hoq-GX-BlJ" firstAttribute="trailing" secondItem="l1y-ox-SZG" secondAttribute="trailing" id="m9s-tJ-FHe"/>
-                            <constraint firstItem="l1y-ox-SZG" firstAttribute="top" secondItem="Wtp-dK-wYw" secondAttribute="bottom" constant="59" id="rWZ-BZ-KUg"/>
-                            <constraint firstItem="l1y-ox-SZG" firstAttribute="centerX" secondItem="Wtp-dK-wYw" secondAttribute="centerX" id="rss-EA-HEm"/>
+                            <constraint firstItem="D3B-4V-9ag" firstAttribute="leading" secondItem="DLh-ar-N6W" secondAttribute="leadingMargin" constant="94" id="sRe-Bl-sgl"/>
                             <constraint firstItem="k9f-KL-Qze" firstAttribute="leading" secondItem="Wtp-dK-wYw" secondAttribute="leading" id="t1d-I9-UdO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cnnButton" destination="l1y-ox-SZG" id="2NR-y2-hik"/>
-                        <outlet property="mashableButton" destination="Hoq-GX-BlJ" id="rpR-ZQ-aai"/>
-                        <outlet property="newsweekButton" destination="CqI-Pd-Ssf" id="j5h-Lj-a4S"/>
+                        <outlet property="apButton" destination="D3B-4V-9ag" id="eYm-Yi-6aO"/>
+                        <outlet property="nymButton" destination="l1y-ox-SZG" id="MpN-jB-lsf"/>
+                        <outlet property="reutersButton" destination="Hoq-GX-BlJ" id="2GD-CT-Dlp"/>
+                        <outlet property="timeButton" destination="qLd-9P-SSJ" id="I7y-r7-tY9"/>
+                        <outlet property="usaButton" destination="CqI-Pd-Ssf" id="Dfe-Oj-0gq"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SplashViewController_to_NewArticleViewController" id="TBB-hA-UQN"/>
                     </connections>
                 </viewController>
@@ -151,13 +164,6 @@
                                             <action selector="lastestTapBarPressed:" destination="BYZ-38-t0r" id="Za3-kK-Ioy"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Fcc-Oh-9o2"/>
-                                    <barButtonItem title="Popular" id="cnu-dZ-XSk">
-                                        <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="popularTapBarPressed:" destination="BYZ-38-t0r" id="gTW-QP-0um"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Qkx-XE-tJG"/>
                                 </items>
                                 <color key="barTintColor" red="0.2328719497" green="0.72963064909999997" blue="0.7854101658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,7 +187,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ttitle Ttitle TtitleTtitle  " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn2-sF-6Xp">
-                                                    <rect key="frame" x="125" y="8" width="242" height="13.5"/>
+                                                    <rect key="frame" x="125" y="8" width="242" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="242" id="sHe-YF-v8h"/>
                                                     </constraints>
@@ -190,7 +196,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwt-uv-T66">
-                                                    <rect key="frame" x="125" y="29.5" width="242" height="52.5"/>
+                                                    <rect key="frame" x="125" y="30" width="242" height="52"/>
                                                     <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -240,10 +246,9 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Newsfeeder" id="VzX-Sn-7aY">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="kiM-GQ-I7S">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="kiM-GQ-I7S">
                                             <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="menuOpenPressed:" destination="BYZ-38-t0r" id="49Y-Lf-p9I"/>
                                                 <segue destination="B6F-sj-8uK" kind="show" id="s7u-pd-tc7"/>
                                             </connections>
                                         </barButtonItem>
@@ -372,9 +377,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cnn_logo.png" width="85" height="85"/>
-        <image name="mashable-logo.png" width="397" height="160"/>
-        <image name="newsweek.png" width="550" height="114"/>
+        <image name="associated-press-s.png" width="200" height="231"/>
+        <image name="new-york-magazine-s.png" width="200" height="47"/>
+        <image name="reuters-s.png" width="200" height="48"/>
+        <image name="time-s.png" width="200" height="63"/>
+        <image name="usa-today-s.png" width="200" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TBB-hA-UQN"/>

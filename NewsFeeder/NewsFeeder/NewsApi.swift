@@ -32,12 +32,10 @@ class NewsApi {
       }
    }
    
-   static func fetchNewsArticles(source: String, sortBysAvailable: String, closure: @escaping ([Article?]) -> ()) {
+   static func fetchNewsArticles(source: String, sortBy: String, closure: @escaping ([Article?]) -> ()) {
       
       let apiKey = "df560ed5464d4ed8831e5623034e81f7"
-      //let sortBy = "top"
-      
-      let url = URL(string: "https://newsapi.org/v1/articles?source=\(source)&sortBysAvailable=\(sortBysAvailable)&apiKey=\(apiKey)")!
+      let url = URL(string: "https://newsapi.org/v1/articles?source=\(source)&sortBy=\(sortBy)&apiKey=\(apiKey)")!
       
       URLSession.shared.dataTask(with: url) { (data, _, _) in
          guard let responseData = data else {

@@ -43,9 +43,5 @@ class NewsArticleDetailViewController: UIViewController {
    
    @IBAction func backPressed(_ sender: Any) {
       performSegue(withIdentifier: "NewsArticleDetailViewController_to_NewArticleViewController", sender: source?.lowercased())
-   }
-   
-   
-   
-   
+   }   
 }
