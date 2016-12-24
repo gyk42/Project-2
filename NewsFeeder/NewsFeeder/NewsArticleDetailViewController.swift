@@ -24,11 +24,7 @@ class NewsArticleDetailViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      apiName.text = source
-      
-      let sourceBKColor = source == "Mashable" ? UIColor.blue : UIColor.red
-      apiName.backgroundColor = sourceBKColor
-      
+      apiName.text = source      
       webViewOutlet.loadRequest(URLRequest(url: URL(string: url!)!))
    }
    

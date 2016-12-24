@@ -22,6 +22,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
    @IBOutlet weak var newsOutlet: UITableView!
    @IBOutlet weak var menuOutlet: UIView!
    @IBOutlet weak var menuLeadingConstraint: NSLayoutConstraint!
+   @IBOutlet weak var logoName: UIImageView!
 
    // MARK: tableView --------------------------------------------------------------
    
@@ -63,17 +64,25 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
          if self.sortBy.isEmpty {
             self.sortBy = "top"
          }
-         
+         /*
+           "new-york-magazine, reuters, usa-today, time, associated-press
+ */
          switch self.source {
-         case "cnn":
-            self.apiName.text = "CNN"
-            self.apiName.backgroundColor = UIColor.red
-         case "mashable":
-            self.apiName.text = "Mashable"
-            self.apiName.backgroundColor = UIColor.blue
-         case "newsweek":
-            self.apiName.text = "Newsweek"
-            self.apiName.backgroundColor = UIColor.red
+         case "new-york-magazine":
+            self.logoName.image = UIImage(named: "new-york-magazine-s.png")
+            self.apiName.text = "New York Magazine"
+         case "reuters":
+            self.logoName.image = UIImage(named: "reuters-s.png")
+            self.apiName.text = "Reuters"
+         case "usa-today":
+            self.logoName.image = UIImage(named: "usa-today-s.png")
+            self.apiName.text = "USA Today"
+         case "time":
+            self.logoName.image = UIImage(named: "time-s.png")
+            self.apiName.text = "Time"
+         case "associated-press":
+            self.logoName.image = UIImage(named: "associated-press-s.png")
+            self.apiName.text = "Associated Press"
          default:
             self.apiName.text = "No news agency"
          }
