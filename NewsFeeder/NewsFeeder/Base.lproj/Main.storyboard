@@ -92,6 +92,16 @@
                                     <action selector="buttonTouchUpInside:" destination="B6F-sj-8uK" eventType="touchUpInside" id="7aW-5o-fvp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UB-5p-ek7">
+                                <rect key="frame" x="176" y="617" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="powered by News API">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="poweredByPressed:" destination="B6F-sj-8uK" eventType="touchUpInside" id="FFC-h6-MJ7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -153,10 +163,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mtd-Zx-k9Y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mtd-Zx-k9Y">
                                 <rect key="frame" x="16" y="64" width="61" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="Q5x-OJ-q3Y"/>
+                                    <constraint firstAttribute="height" constant="34" id="nS9-Zq-tfO"/>
                                 </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjB-kW-YwK">
@@ -201,7 +212,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ttitle Ttitle TtitleTtitle  " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn2-sF-6Xp">
-                                                    <rect key="frame" x="125" y="8" width="242" height="13.5"/>
+                                                    <rect key="frame" x="125" y="8" width="242" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="242" id="sHe-YF-v8h"/>
                                                     </constraints>
@@ -210,7 +221,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwt-uv-T66">
-                                                    <rect key="frame" x="125" y="29.5" width="242" height="52.5"/>
+                                                    <rect key="frame" x="125" y="30" width="242" height="52"/>
                                                     <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -402,6 +413,6 @@
         <image name="usa-today-s.png" width="200" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4fS-a8-Dut"/>
+        <segue reference="TBB-hA-UQN"/>
     </inferredMetricsTieBreakers>
 </document>

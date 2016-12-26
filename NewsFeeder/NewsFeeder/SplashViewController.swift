@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SplashViewController: UIViewController {
    
@@ -15,6 +16,11 @@ class SplashViewController: UIViewController {
    @IBOutlet weak var usaButton: UIButton!
    @IBOutlet weak var timeButton: UIButton!
    @IBOutlet weak var apButton: UIButton!
+   
+   @IBAction func poweredByPressed(_ sender: Any) {
+      let svc = SFSafariViewController(url: URL(string:"https://newsapi.org/")!)
+      self.present(svc, animated: true, completion: nil)
+   }
    
    @IBAction func buttonTouchUpInside(_ sender: UIButton) {
       switch sender {

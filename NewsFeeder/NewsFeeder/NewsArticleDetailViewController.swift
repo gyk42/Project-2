@@ -14,7 +14,6 @@ class NewsArticleDetailViewController: UIViewController {
    
    @IBOutlet weak var webViewOutlet: UIWebView!
    @IBOutlet weak var apiName: UILabel!
-   
 
    var url: String?
    var source: String?
@@ -30,8 +29,7 @@ class NewsArticleDetailViewController: UIViewController {
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if segue.identifier == "NewsArticleDetailViewController_to_NewArticleViewController" {
-         let sourcString = source?.replacingOccurrences(of: " ", with: "-")
-         
+         let sourcString = source?.replacingOccurrences(of: " ", with: "-")         
          let destination = segue.destination as! NewArticleViewController
          destination.source = sourcString!.lowercased()
       }
