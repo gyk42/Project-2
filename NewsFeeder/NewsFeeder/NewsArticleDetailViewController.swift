@@ -30,8 +30,10 @@ class NewsArticleDetailViewController: UIViewController {
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if segue.identifier == "NewsArticleDetailViewController_to_NewArticleViewController" {
+         let sourcString = source?.replacingOccurrences(of: " ", with: "-")
+         
          let destination = segue.destination as! NewArticleViewController
-         destination.source = source!.lowercased()
+         destination.source = sourcString!.lowercased()
       }
    }
    

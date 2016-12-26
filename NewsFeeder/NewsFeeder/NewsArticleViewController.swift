@@ -88,6 +88,7 @@ class NewArticleViewController: UIViewController, UITableViewDataSource, UITable
          }
       })
       newsOutlet.reloadData()
+      print(source)
    }
    
    override func viewWillAppear(_ animated: Bool) {
