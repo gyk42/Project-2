@@ -17,14 +17,11 @@
 		5045871A1DFA6D1600113545 /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504587191DFA6D1600113545 /* NewsApi.swift */; };
 		5045871C1DFB255600113545 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5045871B1DFB255600113545 /* SplashViewController.swift */; };
 		505947711E0DDA9C00A6F61D /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505947701E0DDA9C00A6F61D /* Extention.swift */; };
-		505947761E0DE7DE00A6F61D /* new-york-magazine-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 505947721E0DE7DE00A6F61D /* new-york-magazine-s.png */; };
-		505947771E0DE7DE00A6F61D /* reuters-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 505947731E0DE7DE00A6F61D /* reuters-s.png */; };
-		505947781E0DE7DE00A6F61D /* time-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 505947741E0DE7DE00A6F61D /* time-s.png */; };
-		505947791E0DE7DE00A6F61D /* usa-today-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 505947751E0DE7DE00A6F61D /* usa-today-s.png */; };
-		5059477B1E0DEE3A00A6F61D /* associated-press-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 5059477A1E0DEE3A00A6F61D /* associated-press-s.png */; };
-		5065C6AF1DF893B90044F780 /* cnn_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5065C6AC1DF893B90044F780 /* cnn_logo.png */; };
-		5065C6B01DF893B90044F780 /* mashable-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5065C6AD1DF893B90044F780 /* mashable-logo.png */; };
-		50A0CA831DF89A0E0042F3D2 /* newsweek.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A0CA821DF89A0E0042F3D2 /* newsweek.png */; };
+		505947811E11C70500A6F61D /* associated-press-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 5059477C1E11C70500A6F61D /* associated-press-s.png */; };
+		505947821E11C70500A6F61D /* new-york-magazine-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 5059477D1E11C70500A6F61D /* new-york-magazine-s.png */; };
+		505947831E11C70500A6F61D /* reuters-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 5059477E1E11C70500A6F61D /* reuters-s.png */; };
+		505947841E11C70500A6F61D /* time-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 5059477F1E11C70500A6F61D /* time-s.png */; };
+		505947851E11C70500A6F61D /* usa-today-s.png in Resources */ = {isa = PBXBuildFile; fileRef = 505947801E11C70500A6F61D /* usa-today-s.png */; };
 		50AC916C1DFE38080091CAA4 /* NewsArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC916B1DFE38080091CAA4 /* NewsArticleDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,17 +38,14 @@
 		504587191DFA6D1600113545 /* NewsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
 		5045871B1DFB255600113545 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		505947701E0DDA9C00A6F61D /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
-		505947721E0DE7DE00A6F61D /* new-york-magazine-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-york-magazine-s.png"; sourceTree = "<group>"; };
-		505947731E0DE7DE00A6F61D /* reuters-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reuters-s.png"; sourceTree = "<group>"; };
-		505947741E0DE7DE00A6F61D /* time-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time-s.png"; sourceTree = "<group>"; };
-		505947751E0DE7DE00A6F61D /* usa-today-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usa-today-s.png"; sourceTree = "<group>"; };
-		5059477A1E0DEE3A00A6F61D /* associated-press-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "associated-press-s.png"; sourceTree = "<group>"; };
-		5065C6AC1DF893B90044F780 /* cnn_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cnn_logo.png; path = images/cnn_logo.png; sourceTree = "<group>"; };
-		5065C6AD1DF893B90044F780 /* mashable-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mashable-logo.png"; path = "images/mashable-logo.png"; sourceTree = "<group>"; };
+		5059477C1E11C70500A6F61D /* associated-press-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "associated-press-s.png"; path = "images/associated-press-s.png"; sourceTree = "<group>"; };
+		5059477D1E11C70500A6F61D /* new-york-magazine-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new-york-magazine-s.png"; path = "images/new-york-magazine-s.png"; sourceTree = "<group>"; };
+		5059477E1E11C70500A6F61D /* reuters-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reuters-s.png"; path = "images/reuters-s.png"; sourceTree = "<group>"; };
+		5059477F1E11C70500A6F61D /* time-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "time-s.png"; path = "images/time-s.png"; sourceTree = "<group>"; };
+		505947801E11C70500A6F61D /* usa-today-s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "usa-today-s.png"; path = "images/usa-today-s.png"; sourceTree = "<group>"; };
 		5071BAC81E06231700527466 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Bold.ttf"; path = "fonts/Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		5071BAC91E06231700527466 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Light.ttf"; path = "fonts/Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		5071BACA1E06231700527466 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Regular.ttf"; path = "fonts/Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
-		50A0CA821DF89A0E0042F3D2 /* newsweek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newsweek.png; path = images/newsweek.png; sourceTree = "<group>"; };
 		50AC916B1DFE38080091CAA4 /* NewsArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,15 +123,12 @@
 		5065C6AB1DF893AC0044F780 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				5059477A1E0DEE3A00A6F61D /* associated-press-s.png */,
-				505947721E0DE7DE00A6F61D /* new-york-magazine-s.png */,
-				505947731E0DE7DE00A6F61D /* reuters-s.png */,
-				505947741E0DE7DE00A6F61D /* time-s.png */,
-				505947751E0DE7DE00A6F61D /* usa-today-s.png */,
+				5059477C1E11C70500A6F61D /* associated-press-s.png */,
+				5059477D1E11C70500A6F61D /* new-york-magazine-s.png */,
+				5059477E1E11C70500A6F61D /* reuters-s.png */,
+				5059477F1E11C70500A6F61D /* time-s.png */,
+				505947801E11C70500A6F61D /* usa-today-s.png */,
 				5008D0051DF3B7FD00356B88 /* Assets.xcassets */,
-				50A0CA821DF89A0E0042F3D2 /* newsweek.png */,
-				5065C6AC1DF893B90044F780 /* cnn_logo.png */,
-				5065C6AD1DF893B90044F780 /* mashable-logo.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -213,16 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5008D0091DF3B7FD00356B88 /* LaunchScreen.storyboard in Resources */,
+				505947851E11C70500A6F61D /* usa-today-s.png in Resources */,
 				5008D0061DF3B7FD00356B88 /* Assets.xcassets in Resources */,
-				505947771E0DE7DE00A6F61D /* reuters-s.png in Resources */,
-				5065C6AF1DF893B90044F780 /* cnn_logo.png in Resources */,
-				5065C6B01DF893B90044F780 /* mashable-logo.png in Resources */,
-				505947791E0DE7DE00A6F61D /* usa-today-s.png in Resources */,
-				505947781E0DE7DE00A6F61D /* time-s.png in Resources */,
-				50A0CA831DF89A0E0042F3D2 /* newsweek.png in Resources */,
-				5059477B1E0DEE3A00A6F61D /* associated-press-s.png in Resources */,
-				505947761E0DE7DE00A6F61D /* new-york-magazine-s.png in Resources */,
+				505947841E11C70500A6F61D /* time-s.png in Resources */,
 				5008D0041DF3B7FD00356B88 /* Main.storyboard in Resources */,
+				505947821E11C70500A6F61D /* new-york-magazine-s.png in Resources */,
+				505947831E11C70500A6F61D /* reuters-s.png in Resources */,
+				505947811E11C70500A6F61D /* associated-press-s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
