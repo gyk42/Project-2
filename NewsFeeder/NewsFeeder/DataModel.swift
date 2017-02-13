@@ -4,50 +4,25 @@
 //
 //  Created by Yoon Yu on 12/3/16.
 //  Copyright © 2016 Grace Yu. All rights reserved.
-//
 
-import UIKit
+
 import Foundation
 
 
-class NewsArticles {
+class Article {
    var author: String
    var title: String
    var description: String
    var url: String
    var urlToImage: String
+   var publishedAt: String
    
-   init(_ author: String, _ title: String, _ description: String, url: String, urlToImage: String) {
-      self.author = author
-      self.title = title
-      self.description = description
-      self.url = url
-      self.urlToImage = urlToImage
-      // conveninence init
+   init(jsonObject: [String : Any]) {
+      author = jsonObject["author"] as? String ?? "Unknown"
+      title = jsonObject["title"] as? String ?? "Unknown"
+      description = jsonObject["description"] as? String ?? "Unknown"
+      url = jsonObject["url"] as? String ?? "Unknown"
+      urlToImage = jsonObject["urlToImage"] as? String ?? "Unknown"
+      publishedAt = jsonObject["publishedAt"] as? String ?? "Unknown"
    }
 }
-
-//func fetchData(closure: @escaping (Data) -> ()) {
-//   let apiKey = "df560ed5464d4ed8831e5623034e81f7"
-//   let newsSource = "cnn"
-//   let endpoint = "https://newsapi.org/v1/articles?source=\(newsSource)&sortBy=top&apiKey=" + apiKey
-//   let url = URLRequest(url: URL(string: endpoint)!)
-//   let session = URLSession(configuration: URLSessionConfiguration.default)
-//   let task = session.dataTask(with: url) {(data, response, error) in
-//      
-//      guard let responseData = data else {
-//         print("Error: did not receive data")
-//         return
-//      }
-//      
-//      DispatchQueue.main.async {
-//         closure(responseData)
-//      }
-//   }
-//   
-//   task.resume()
-//}
-
-
-
-
