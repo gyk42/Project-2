@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6F-f3-ruR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="126.38680659670166"/>
+            <point key="canvasLocation" x="-502" y="139"/>
         </scene>
         <!--News Article View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -212,7 +212,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ttitle Ttitle TtitleTtitle  " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn2-sF-6Xp">
-                                                    <rect key="frame" x="125" y="8" width="242" height="14"/>
+                                                    <rect key="frame" x="125" y="8" width="242" height="13.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="242" id="sHe-YF-v8h"/>
                                                     </constraints>
@@ -221,7 +221,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwt-uv-T66">
-                                                    <rect key="frame" x="125" y="30" width="242" height="52"/>
+                                                    <rect key="frame" x="125" y="29.5" width="242" height="52.5"/>
                                                     <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -402,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9U-T1-xxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="139"/>
+            <point key="canvasLocation" x="764" y="139"/>
         </scene>
     </scenes>
     <resources>
@@ -413,6 +413,6 @@
         <image name="usa-today-s.png" width="200" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TBB-hA-UQN"/>
+        <segue reference="4fS-a8-Dut"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,18 +1,11 @@
-#Project2 Newsfeed
+##Project2 Newsfeeder 
+NewsFeeder App utilizes [NewsAPI](https://newsapi.org/) for RESTful API to get the news feed from New York Magazine, Reuters, USA Today, Time and Associated Press news agencies.
 
-This is a collection of CNN, Mashable & Newsweek newsfeed from NewsAPI.  
+* Used parameters to toggle through different news agencies to reduce and repeat code for optimization to the App
+* Added top and latest tab sorting mechanism using toolbar layout
+* Used custom UITableview
+* Used both Safariview and Webview to display external information
+* Used RESTful API and jSON serialization to obtain data from News API
 
-##Screenshot
-Splash/Collection view
-
-![Project Image](https://github.com/gyk42/iOS-Class-Project-2/blob/develop/images/CollectionView-Feeder.png)
-
-CNN Article tableView, detail/web view/ drawer menu
-
-![Project Image](https://github.com/gyk42/iOS-Class-Project-2/blob/develop/images/1-CNN-Article-Detail-Menu-view.png)
-
-Mash Article tableView, detail/web view/ drawer menu
-
-![Project Image](https://github.com/gyk42/iOS-Class-Project-2/blob/develop/images/2-Mash-Article-Detail-Menu-view.png)
-
-Newsweek will follow same format as CNN and Mash
+##Scenario of when Time is Tapped: 
+![](./images/NewsAPI.png)
